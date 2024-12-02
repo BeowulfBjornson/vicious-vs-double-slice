@@ -18,7 +18,7 @@ def main():
         ac=21,
         mh_damage="2d8+4",
         oh_damage="2d6+4",
-        oh_penalty=-2,
+        oh_penalty=-4,
         mh_crit_damage="5d12+8",
         oh_crit_damage="4d6+4",
         vicious_damage="1d8",

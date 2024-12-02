@@ -44,6 +44,24 @@ tests = ["cloudpickle", "hypothesis", "mypy (>=1.11.1)", "pympler", "pytest (>=4
 tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
 
 [[package]]
+name = "beartype"
+version = "0.19.0"
+description = "Unbearably fast near-real-time hybrid runtime-static type-checking in pure Python."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "beartype-0.19.0-py3-none-any.whl", hash = "sha256:33b2694eda0daf052eb2aff623ed9a8a586703bbf0a90bbc475a83bbf427f699"},
+    {file = "beartype-0.19.0.tar.gz", hash = "sha256:de42dfc1ba5c3710fde6c3002e3bd2cad236ed4d2aabe876345ab0b4234a6573"},
+]
+
+[package.extras]
+dev = ["autoapi (>=0.9.0)", "coverage (>=5.5)", "equinox", "jax[cpu]", "jaxtyping", "mypy (>=0.800)", "numba", "numpy", "pandera", "pydata-sphinx-theme (<=0.7.2)", "pygments", "pyright (>=1.1.370)", "pytest (>=4.0.0)", "sphinx", "sphinx (>=4.2.0,<6.0.0)", "sphinxext-opengraph (>=0.7.5)", "tox (>=3.20.1)", "typing-extensions (>=3.10.0.0)"]
+doc-rtd = ["autoapi (>=0.9.0)", "pydata-sphinx-theme (<=0.7.2)", "sphinx (>=4.2.0,<6.0.0)", "sphinxext-opengraph (>=0.7.5)"]
+test = ["coverage (>=5.5)", "equinox", "jax[cpu]", "jaxtyping", "mypy (>=0.800)", "numba", "numpy", "pandera", "pygments", "pyright (>=1.1.370)", "pytest (>=4.0.0)", "sphinx", "tox (>=3.20.1)", "typing-extensions (>=3.10.0.0)"]
+test-tox = ["equinox", "jax[cpu]", "jaxtyping", "mypy (>=0.800)", "numba", "numpy", "pandera", "pygments", "pyright (>=1.1.370)", "pytest (>=4.0.0)", "sphinx", "typing-extensions (>=3.10.0.0)"]
+test-tox-coverage = ["coverage (>=5.5)"]
+
+[[package]]
 name = "blinker"
 version = "1.9.0"
 description = "Fast, simple object-to-object and broadcast signaling"
@@ -214,6 +232,22 @@ files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
+
+[[package]]
+name = "dyce"
+version = "0.6.2"
+description = "Simple Python tools for exploring dice outcomes and other finite discrete probabilities"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "dyce-0.6.2-py3-none-any.whl", hash = "sha256:04287b6e0c8c3253319adb962909d818c588bb97ea2f976851fb913619f10099"},
+]
+
+[package.dependencies]
+numerary = ">=0.4.3,<0.5.0"
+
+[package.extras]
+dev = ["numpy", "pandas", "pre-commit", "sympy (>=1.9,<2.0)", "tox (>=4.0,<5.0)", "versioningit (>=2.0,<3.0)"]
 
 [[package]]
 name = "gitdb"
@@ -447,6 +481,22 @@ modin = ["modin"]
 pandas = ["pandas (>=0.25.3)"]
 polars = ["polars (>=0.20.3)"]
 pyarrow = ["pyarrow (>=11.0.0)"]
+
+[[package]]
+name = "numerary"
+version = "0.4.4"
+description = "Python hacks for type-checking numbers"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "numerary-0.4.4-py3-none-any.whl", hash = "sha256:ad955ddf7f5275f8e52f5520b2d6c654cc3bf1e3ae4bfb45664c9d51b208d0c6"},
+]
+
+[package.dependencies]
+beartype = ">=0.15,<1.0"
+
+[package.extras]
+dev = ["numpy (>=1.25,<2.0)", "pre-commit", "sympy (>=1.9,<2.0)", "tox (>=4.0,<5.0)", "versioningit (>=2.0,<3.0)"]
 
 [[package]]
 name = "numpy"
@@ -1207,4 +1257,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "8125da225d970ab908c76a7082c4ea593e5c4fac5b426471a02b5b95c705e645"
+content-hash = "483c48fdfd752a162a5a15db1651eba9ff9393ee3686954410784a870d8db160"
